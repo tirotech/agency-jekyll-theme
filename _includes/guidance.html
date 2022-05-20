@@ -8,7 +8,7 @@
             <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].guidance.title }}</h2>
 	        {% endif %}
           {% if site.data.sitetext[site.locale].guidance.photo %}
-            <img height="{{ site.data.sitetext[site.locale].guidance.photo.height | default: 80 }}" src="{{ site.data.sitetext[site.locale].guidance.photo.path }}"/>
+            <img class="w-100" src="{{ site.data.sitetext[site.locale].guidance.photo.path }}"/>
           {% endif %}
           {% if site.data.sitetext[site.locale].guidance.text %}
 		        <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].guidance.text }}</h3>
