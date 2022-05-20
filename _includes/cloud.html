@@ -4,12 +4,12 @@
 	
       <div class="row">
         <div class="col-lg-12 text-center">
-          {%- if site.data.sitetext[site.locale].cloud.title -%}
+          {% if site.data.sitetext[site.locale].cloud.title %}
             <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].cloud.title }}</h2>
-	        {%- endif -%
-          {%- if site.data.sitetext[site.locale].cloud.photo -%}
+	        {% endif %}
+          {% if site.data.sitetext[site.locale].cloud.photo %}
             <img height="{{ site.data.sitetext[site.locale].cloud.photo.height | default: 80 }}" src="{{ site.data.sitetext[site.locale].cloud.photo.path }}"/>
-          {%- endif -%}}
+          {% endif %}
           {% if site.data.sitetext[site.locale].cloud.text %}
 		        <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].cloud.text }}</h3>
 		      {% endif %}
