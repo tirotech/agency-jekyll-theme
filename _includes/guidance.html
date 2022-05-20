@@ -3,12 +3,12 @@
     <div class="container">
 	
       <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+        <div class="col-12 col-sm-12 col-md-6 text-center mx-auto">
           {% if site.data.sitetext[site.locale].guidance.title %}
             <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].guidance.title }}</h2>
 	        {% endif %}
           {% if site.data.sitetext[site.locale].guidance.photo %}
-            <img src="{{ site.data.sitetext[site.locale].guidance.photo.path }}" width="100%"/>
+            <img height="{{ site.data.sitetext[site.locale].guidance.photo.height | default: 80 }}" src="{{ site.data.sitetext[site.locale].guidance.photo.path }}"/>
           {% endif %}
           {% if site.data.sitetext[site.locale].guidance.text %}
 		        <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].guidance.text }}</h3>
@@ -18,7 +18,7 @@
 	  
       <div class="row text-center">
 	  {% for service in site.data.sitetext[site.locale].guidance.list %}
-        <div class="col-md-2">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
           <span class="fa-stack fa-4x">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
             <i class="{{ service.icon | default: "fas fa-shopping-cart" }} fa-stack-1x fa-inverse"></i>
