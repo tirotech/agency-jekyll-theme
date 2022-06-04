@@ -24,10 +24,9 @@ $(function() {
           $('#contactForm').trigger("reset");
         },
 
-        complete: function() {
-          setTimeout(function() {
-            $("#sendMessageButton").prop("disabled", false); // Re-enable submit button when AJAX call is complete
-          }, 1000);
+        complete: function () {
+          $("#sendMessageButton").trigger("reset")
+          $("#sendMessageButton").prop("disabled", false); // Re-enable submit button when AJAX call is complete
         }
       });
     },

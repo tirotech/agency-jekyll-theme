@@ -48,19 +48,22 @@
               value="{{ site.data.sitetext[site.locale].contact.subject | default: "Contact Form Submission" }}">
             <div class="clearfix"></div>
             <div class="col-lg-12 text-center">
-              <div class="alert alert-danger alert-dismissible fade collapse" role="alert" id="email-error">
+              <div class="alert alert-danger alert-dismissible collapse" role="alert" id="email-error">
                 <strong>Sorry, our email server is not responding. Please try again later or contact us at {{ site.email }}</strong>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="alert alert-success alert-dismissible fade collapse" role="alert" id="email-success">
+              <div class="alert alert-success alert-dismissible collapse" role="alert" id="email-success">
                 <strong>Thanks! Your message has been sent. We will be in touch.</strong>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase"
+              <button
+                id="sendMessageButton"
+                class="btn btn-primary btn-xl text-uppercase"
+                data-loading-text="Sending..."
                 type="submit">{{ site.data.sitetext[site.locale].contact.submit | default: "Send Message" }}</button>
             </div>
             <input type="hidden" name="_captcha" value="false">
