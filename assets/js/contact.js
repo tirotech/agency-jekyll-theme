@@ -15,12 +15,12 @@ $(function() {
         cache: false,
 
 		    success: function() {
-          $('#email-success').show()
+          $('#email-success').fadeIn()
           $('#contactForm').trigger("reset");
         },
 
         error: function() {
-          $('#email-error').show()
+          $('#email-error').fadeIn()
           $('#contactForm').trigger("reset");
         },
 
@@ -44,6 +44,6 @@ $(function() {
 
 /*When clicking on form hide fail/success boxes */
 $('#name').on('focus', function() {
-  $('#email-success').hide();
-  $('#email-error').hide();
+  $('#email-success').fadeOut();
+  $('#email-error').fadeOut();
 });
